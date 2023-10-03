@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Arzni</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header><img src="src/logo.svg" alt="logo"></header>
+    <div class="section1">
+        <div class="text">   
+            <p id="big">Sour yogurt</p>     
+            <p>Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
+        </div>
+        <img src="src/photo.png" alt="Yogurt">
+        
+    </div>
+    <div class="main">
+        <p>Our products</p>
+        <div class="cards">
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"></div>
+                <div class="name">Yogurt</div>
+            </div>
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"></div>
+                <div class="name">Yogurt</div>
+            </div>
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"></div>
+                <div class="name">Yogurt</div>
+            </div>
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"></div>
+                <div class="name">Yogurt</div>
+            </div>
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"></div>
+                <div class="name">Yogurt</div>
+            </div>
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"></div>
+                <div class="name">Yogurt</div>
+            </div>
+            <div class="modal" id="modal">
+                <div class="modal-content" id="modal-content">
+                    <!-- Содержимое выбранной карточки будет здесь -->
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 10px;">Contact us</p>
+        <div class="contact">
+            <a href="mailto:legex.ee@hotmail.com?">
+                <div class="contact-card">
+                    <img src="src/mail.svg" alt="mail">
+                    legex.ee@hotmail.com
+                </div>
+            </a>
+            
+            <a href="tel:+37255520233">
+                <div class="contact-card">
+                    <img src="src/phone.svg" alt="phone">
+                    +372 5552 0233
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

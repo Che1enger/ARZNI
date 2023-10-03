@@ -1,0 +1,214 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    z-index: 999;
+    margin: 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.main{
+    margin-left: 6%;
+    margin-right: 6%;
+    height: 120%;
+   
+}
+.section1{
+   
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent), url(src/background.png);
+   background-repeat: no-repeat;
+    width:  100%;
+    height: 90vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    background-size:cover;
+    background-position: center; 
+
+}
+.section1 img{
+    margin: 0;
+    height: 90%;
+    width: 30%;
+    min-width: 300px;
+    filter: drop-shadow(-10px 10px 30px #000000);
+    
+}
+.text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    color: white;
+    height: 100%;
+    width: 40%;
+}
+#big{
+    margin: 0;
+    width: 100%;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.main p{
+    margin: 0;
+    width: 100%;
+    height: 50px;
+   
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    row-gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: white;
+    flex: 0 0 calc(30%);
+    min-width: 380px;
+    width: 100%;
+    height: 390px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    
+}
+.image-box{
+    width: 100%;
+    height: 356px;
+    border-radius: 12px;
+    background-color: #0052A4;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    width: 100%;
+    height:70px;
+   
+
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+.contact-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    width: 250px;
+    height: 60px;
+    border: #000000 solid 2px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+
+
+
+@media screen and (max-width:520px) {
+    .text{
+        width: 90%;
+        justify-content: flex-start;
+        margin: 0;
+        min-width: 400px;
+    }
+    .main{
+        width: 100%;
+        margin: 0;
+    }
+    .section1{
+        padding: 0;
+        height: 100vh;
+        flex-direction: row;
+    }
+    .section1 img{
+        max-width: 200px;
+        max-height: 350px;
+        width: 20%;
+        height: 70%;
+        margin-top: -100%;
+    }
+    .contact-card{
+        min-width: 400px;
+        justify-content: center;
+        column-gap: 15px;
+    }
+    .cards{
+        min-width: 300px;
+        display: flex;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .card{
+        width: 90%;
+    }
+    .contact{
+        
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        height: 150px;
+    }
+    .card.hidden {
+        display: none;
+    }
+
+    .modal {
+        display: none; 
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.2s; 
+}
+.card:hover,.contact-card:hover {
+    transform: translateY(-2px) translateX(10px);
+    box-shadow: -8px 8px 0 0 black;
+};
+
+
+
+  
+
+
