@@ -136,6 +136,7 @@ a{
         height: auto;
         justify-content: flex-start;
         margin: 0;
+        padding: 10px;
         min-width: 400px;
     }
     .main{
