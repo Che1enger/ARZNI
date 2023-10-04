@@ -136,7 +136,7 @@ a{
         height: auto;
         justify-content: flex-start;
         padding: 10px;
-        min-width: 400px;
+        min-width: 350px;
     }
     .main{
         width: 100%;
@@ -152,9 +152,9 @@ a{
     .section1 img{
         max-width: 200px;
         max-height: 350px;
-        width: 20%;
-        height: 70%;
-        
+        width: 10%;
+        height: 50%;
+        margin-top: -10%;
     }
     .contact-card{
         min-width: 400px;
