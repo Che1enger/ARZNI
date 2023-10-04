@@ -133,6 +133,7 @@ a{
 @media screen and (max-width:520px) {
     .text{
         width: 90%;
+        height: auto;
         justify-content: flex-start;
         margin: 0;
         min-width: 400px;
@@ -151,7 +152,7 @@ a{
         max-height: 350px;
         width: 20%;
         height: 70%;
-        margin-top: -100%;
+        
     }
     .contact-card{
         min-width: 400px;
