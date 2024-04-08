@@ -15,15 +15,21 @@
             <p id="big">Sour yogurt</p>     
             <p>Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
         </div>
-        <img src="src/photo1.webp" alt="Yogurt">
+        <div class="image">
+            <img src="src/photo1.webp" alt="Yogurt">
+        </div>
         
     </div>
     <div class="main">
         <p>Our products</p>
         <div class="cards">
             <div class="card"  onclick="showCard(this)">
-                <div class="image-box"></div>
-                <div class="name">Yogurt</div>
+                <div class="image-box"><img src="./src/bottle.png" alt="bottle"></div>
+                <div class="name">Ayran <div class="bold">2L</div></div>
+            </div>
+            <div class="card"  onclick="showCard(this)">
+                <div class="image-box"><img src="./src/banka.png" alt="bottle"></div>
+                <div class="name">Yogurt <div class="bold">700g</div></div>
             </div>
             <div class="card"  onclick="showCard(this)">
                 <div class="image-box"></div>
@@ -37,14 +43,7 @@
                 <div class="image-box"></div>
                 <div class="name">Yogurt</div>
             </div>
-            <div class="card"  onclick="showCard(this)">
-                <div class="image-box"></div>
-                <div class="name">Yogurt</div>
-            </div>
-            <div class="card"  onclick="showCard(this)">
-                <div class="image-box"></div>
-                <div class="name">Yogurt</div>
-            </div>
+            
             <div class="modal" id="modal">
                 <div class="modal-content" id="modal-content">
                     <!-- Содержимое выбранной карточки будет здесь -->

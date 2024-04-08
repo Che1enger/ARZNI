@@ -36,12 +36,17 @@ header{
     flex-wrap: wrap; 
     background-size:cover;
     background-position: center; 
-
+}
+.image{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .section1 img{
-    margin: 0;
-    height: 90%;
-    width: 30%;
+    width:30vw;
+    height: 80%;
     min-width: 300px;
     filter: drop-shadow(-10px 10px 30px #000000);
     
@@ -52,6 +57,7 @@ header{
     flex-direction: column;
     row-gap: 20px;
     color: white;
+    font-size: clamp(0.78rem, 2.5vw, 1.1rem);
     height: 100%;
     width: 40%;
 }
@@ -75,27 +81,46 @@ header{
 .cards{
     display: flex;
     flex-direction: row;
-    row-gap: 30px;
-    justify-content: space-between;
+    gap: 30px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .card{
     background-color: white;
-    flex: 0 0 calc(30%);
+    flex: 0 0 calc(30% - 20px);
     min-width: 380px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
     width: 100%;
     height: 390px;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 25px;
     padding: 10px;
     transition: all 0.3s ease-in-out;
     
 }
 .image-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 356px;
     border-radius: 12px;
     background-color: #0052A4;
+
+}
+.image-box img{
+    rotate: -15deg;
+    
+    height: 100%;
+
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
 }
 .contact{
     display: flex;
@@ -118,7 +143,9 @@ a{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px
+    ;
     border-radius: 12px;
     width: 250px;
     height: 60px;
@@ -126,7 +153,9 @@ a{
     transition: all 0.3s ease-in-out;
     font-weight: 600;
 }
-
+.contact-card img{
+    width: 30px;
+}
 
 
 
@@ -162,7 +191,12 @@ a{
 }
 
 @media screen and (max-width:620px) {
-    
+    header{
+        height: 50px;
+    }
+    header img{
+        width: 50px;
+    }
     .text{
         width: 90%;
         height: auto;
@@ -179,22 +213,27 @@ a{
         width: 100%;
         padding: 0;
         margin: 0;
-        height: 100vh;
+        height: 90vh;
         flex-direction: row;
         justify-content: center;
     }
+    .image{
+        width: 80%;
+        align-items: start;
+
+    }
     .section1 img{
-        max-width: 200px;
-        max-height: 350px;
-        width: 10%;
-        height: 50%;
-        margin-top: -10%;
-        
+        height: 60%;
+
     }
     .contact-card{
         width: 100%;
         justify-content: center;
         column-gap: 15px;
+        font-size: 1.4em;
+    }
+    .contact-card img{
+        width: 40px;
     }
     a{
         width: 90%;
