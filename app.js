@@ -7,7 +7,7 @@ function showCard(card) {
       var img = imageBox.querySelector("img");
   
       cardClone.style.transform = "scale(1.3)";
-      img.style.transform = "scale(1.3)"; // Добавленная строка для масштабирования изображения
+      img.style.transform = "scale(1.2)"; // Добавленная строка для масштабирования изображения
   
       modalContent.innerHTML = "";
       modalContent.appendChild(cardClone);
