@@ -43,7 +43,6 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #000000 solid 2px;
 }
 .image img{
     width:30vw;
