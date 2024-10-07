@@ -1,28 +1,57 @@
 function showCard(card) {
-  if (window.innerWidth > 500) {
-      var modal = document.getElementById("modal");
-      var modalContent = document.getElementById("modal-content");
-      var cardClone = card.cloneNode(true);
-      var imageBox = cardClone.querySelector(".image-box");
-      var img = imageBox.querySelector("img");
+    if (window.innerWidth > 500) {
+        const modal = document.getElementById("modal");
+        const modalContent = document.getElementById("modal-content");
+        const cardClone = card.cloneNode(true);
+        const imageBox = cardClone.querySelector(".image-box");
+        const img = imageBox.querySelector("img");
+        const content = cardClone.querySelector(".content");
 
-      cardClone.style.width = "30vw";  
-      cardClone.style.height = "62vh";
+        cardClone.style.transition = "none";
+        cardClone.style.boxShadow = "none";
+        cardClone.style.transform = "none";
 
-      img.style.transform = "scale(1.3)";  
-      imageBox.style.height = "55vh";
+        const table = cardClone.querySelector("table");
+        table.style.display = "table";
 
-    
-      modalContent.style.fontSize = "clamp(1rem, 2vw, 2.5rem)";  // Минимум 1rem, адаптивный 2vw, максимум 2.5re
+        cardClone.style.flexDirection = "row";
+        content.style.width = "50%";
+        const tableContent = cardClone.querySelector(".table");
+        tableContent.style.width = "50%";
+        tableContent.style.height = "100%";
 
-      modalContent.innerHTML = "";
-      modalContent.appendChild(cardClone);
-      modal.style.display = "flex";
-      cardClone.style.boxShadow = '0px 0px 0 0 black';
-  }
+
+        cardClone.style.width = "60vw";  
+        cardClone.style.height = "60vh";
+        img.style.transform = "scale(1.3)";
+        imageBox.style.height = "55vh";
+
+        modalContent.style.fontSize = "clamp(1rem, 2vw, 2.5rem)";  
+
+        modalContent.innerHTML = "";
+        modalContent.appendChild(cardClone);
+        modal.style.display = "flex";
+
+        cardClone.style.boxShadow = '0px 0px 0 0 black';
+        cardClone.classList.add('card-clone');
+    } else {
+        const table = card.querySelector("table");
+
+        if (table.style.display === "table") {
+            table.style.display = "none";
+            card.style.height = "380px";
+        } else {
+            table.style.display = "table";
+            card.style.height = "auto"; 
+        }
+    }
 }
 
-
+  
+window.addEventListener("resize", function() {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => handleResize(card));
+});
 document.getElementById("modal").addEventListener("click", function(event) {
     if (event.target === this) {
         this.style.display = "none";
