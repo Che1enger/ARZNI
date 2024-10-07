@@ -20,14 +20,13 @@ function showCard(card) {
         tableContent.style.width = "50%";
         tableContent.style.height = "100%";
 
-
         cardClone.style.width = "60vw";  
         cardClone.style.height = "60vh";
         img.style.transform = "scale(1.3)";
         imageBox.style.height = "55vh";
 
         modalContent.style.fontSize = "clamp(1rem, 2vw, 2.5rem)";  
-
+        table.style.fontSize = "clamp(1rem, 2vw, 2.5rem)";
         modalContent.innerHTML = "";
         modalContent.appendChild(cardClone);
         modal.style.display = "flex";
@@ -37,21 +36,24 @@ function showCard(card) {
     } else {
         const table = card.querySelector("table");
 
-        if (table.style.display === "table") {
-            table.style.display = "none";
-            card.style.height = "380px";
-        } else {
-            table.style.display = "table";
-            card.style.height = "auto"; 
-        }
+        card.style.transition = "none"; 
+        card.style.maxHeight = "380px"; 
+
+        setTimeout(() => {
+            card.style.transition = "max-height 1.5s ease";
+            card.style.overflow = "hidden";
+
+            if (table.style.display === "table") {
+                table.style.display = "none";
+                card.style.maxHeight = "380px";
+            } else {
+                table.style.display = "table";
+                card.style.maxHeight = "800px";
+            }
+        }, 1);
     }
 }
 
-  
-window.addEventListener("resize", function() {
-    const cards = document.querySelectorAll(".card");
-    cards.forEach(card => handleResize(card));
-});
 document.getElementById("modal").addEventListener("click", function(event) {
     if (event.target === this) {
         this.style.display = "none";

@@ -119,7 +119,6 @@ header{
 }
 .image-box img{
     rotate: -15deg;
-    
     height: 100%;
 
 }
@@ -153,7 +152,10 @@ table {
     border-radius: 10px;
     border: 1px solid black;
    }
-   
+   table td:first-child {
+    text-align: left;
+}
+
    table th:not(:last-child),
    table td:not(:last-child) {
     border-right: 1px solid black;
@@ -284,11 +286,17 @@ a{
         display: flex;
         justify-content: center;
     }
-    .card{
+    .card{ 
+        height: auto;
+        overflow: hidden;
         min-width: 350px;
-        max-height: auto;
+        max-height: 30%;
         width: 100%;
-        height: 30%;
+        transition: max-height 1.5s;
+        
+    }
+    .card::after{
+        max-height: 250px;
     }
     .image-box,.name{
         width: 100%;
